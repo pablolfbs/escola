@@ -30,8 +30,8 @@ INSERT INTO subject_prerequisite (id, subject_id, prerequisite_id) VALUES
 (1, 2, 1), -- MAT102 depende de MAT101  
 (2, 3, 1); -- FIS101 depende de MAT101  
 
--- TABELA: class  
-INSERT INTO class (id, subject_id, taught_by, year, semester, code) VALUES   
+-- TABELA: class_entity  
+INSERT INTO class_entity (id, subject_id, taught_by, year, semester, code) VALUES   
 (1, 1, 1, 2025, '1', 'C-MAT101'),  
 (2, 2, 1, 2025, '2', 'C-MAT102'),  
 (3, 3, 2, 2025, '1', 'C-FIS101');  
