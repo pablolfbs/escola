@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Class {
+public class ClassEntity {
 
     @Id
     private Long id;

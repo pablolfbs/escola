@@ -1,21 +1,20 @@
-package com.pablo.escola.model;
+package com.pablo.escola.service;
 
 import java.time.LocalTime;
 
+import com.pablo.escola.model.ClassEntity;
+
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity
-@Table(name = "class_schedule")
 public class ClassSchedule {
 
-    @Id
+ @Id
     private Long id;
 
     @Column(name = "room_id")
@@ -30,8 +29,7 @@ public class ClassSchedule {
     @Column(name = "end_time")
     private LocalTime endTime;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "class_id")
     private ClassEntity classEntity;
-
 }
